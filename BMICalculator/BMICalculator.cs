@@ -68,6 +68,7 @@ namespace BMICalculator
             WeightTextBox.Text = "";
             ResultTextBox.Text = "";
             ScaleTextBox.Text = "";
+            ProgressBar.Value = 0;
         }
         private void CalculateBMI()
         {
@@ -96,22 +97,43 @@ namespace BMICalculator
         }
         private void DisplayScale()
         {
-            if(BMIResult >0 && BMIResult < 18.5)
+            ProgressBar.Maximum = 4;
+            if (BMIResult > 0 && BMIResult < 18.5)
             {
                 ScaleTextBox.Text = "Underweight";
+                ProgressBar.Value = 1;
+                ProgressBar.ForeColor = Color.Orange;
             }
-            else if(BMIResult >=18.5 && BMIResult < 25)
+            else if(BMIResult >= 18.5 && BMIResult < 25)
             {
                 ScaleTextBox.Text = "Normal";
+                ProgressBar.Value = 2;
+                ProgressBar.ForeColor = Color.Green;
             }
             else if (BMIResult >= 25 && BMIResult < 30)
             {
                 ScaleTextBox.Text = "Overweight";
+                ProgressBar.Value = 3;
+                ProgressBar.ForeColor = Color.Yellow;
             }
             else if (BMIResult >= 30)
             {
                 ScaleTextBox.Text = "Obese";
+                ProgressBar.Value = 4;
+                ProgressBar.ForeColor = Color.Red;
             }
+        }
+
+        private void ImperialButton_Click(object sender, EventArgs e)
+        {
+            HeightUnitLabel.Text = "cm";
+            WeightUnitLabel.Text = "kg";
+        }
+
+        private void MetricButton_Click(object sender, EventArgs e)
+        {
+            HeightUnitLabel.Text = "inch";
+            WeightUnitLabel.Text = "lbs";
         }
     }
 }

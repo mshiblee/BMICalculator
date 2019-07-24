@@ -70,6 +70,8 @@
             this.ImperialButton.TabStop = true;
             this.ImperialButton.Text = "Imperial";
             this.ImperialButton.UseVisualStyleBackColor = true;
+            this.ImperialButton.CheckedChanged += new System.EventHandler(this.ImperialButton_Click);
+            this.ImperialButton.Click += new System.EventHandler(this.ImperialButton_Click);
             // 
             // MetricButton
             // 
@@ -81,6 +83,8 @@
             this.MetricButton.TabIndex = 1;
             this.MetricButton.Text = "Metric";
             this.MetricButton.UseVisualStyleBackColor = true;
+            this.MetricButton.CheckedChanged += new System.EventHandler(this.MetricButton_Click);
+            this.MetricButton.Click += new System.EventHandler(this.MetricButton_Click);
             // 
             // HeightLabel
             // 
