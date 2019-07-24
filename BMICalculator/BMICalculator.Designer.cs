@@ -109,6 +109,7 @@
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(78, 30);
             this.HeightTextBox.TabIndex = 4;
+            this.HeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.HeightTextBox.Click += new System.EventHandler(this.ActiveTextBox_click);
             this.HeightTextBox.TextChanged += new System.EventHandler(this.ActiveTextBox_click);
             // 
@@ -119,6 +120,7 @@
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(78, 30);
             this.WeightTextBox.TabIndex = 5;
+            this.WeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.WeightTextBox.Click += new System.EventHandler(this.ActiveTextBox_click);
             // 
             // CalculateBMIButton
@@ -156,14 +158,18 @@
             // 
             // ResultTextBox
             // 
+            this.ResultTextBox.Enabled = false;
             this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultTextBox.Location = new System.Drawing.Point(136, 203);
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.Size = new System.Drawing.Size(131, 30);
             this.ResultTextBox.TabIndex = 9;
+            this.ResultTextBox.Text = "0.0";
+            this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ScaleTextBox
             // 
+            this.ScaleTextBox.Enabled = false;
             this.ScaleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScaleTextBox.Location = new System.Drawing.Point(136, 242);
             this.ScaleTextBox.Name = "ScaleTextBox";
