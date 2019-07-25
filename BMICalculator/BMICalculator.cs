@@ -135,5 +135,10 @@ namespace BMICalculator
             HeightUnitLabel.Text = "inch";
             WeightUnitLabel.Text = "lbs";
         }
+
+        private void BMICalculatorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

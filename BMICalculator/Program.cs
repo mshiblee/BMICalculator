@@ -12,15 +12,21 @@ namespace BMICalculator
 {
     static class Program
     {
+        public static WelcomeForm welcomeForm;
+        public static BMICalculatorForm bmiCalculatorForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculatorForm());
+            welcomeForm = new WelcomeForm();
+            bmiCalculatorForm = new BMICalculatorForm(); 
+            //Application.EnableVisualStyles();
+           
+            Application.Run(new WelcomeForm());
         }
     }
 }
