@@ -51,6 +51,7 @@
             // WelcomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.ControlBox = false;
             this.Controls.Add(this.WelcomeLabel);
